@@ -1,0 +1,346 @@
+////////////////////////////////////////////
+///// 		MIXINS
+///////////////////////////////////////////////
+
+@mixin transitionEffectAll ($time) {
+	-webkit-transition: all $time;
+	-moz-transition: all $time;
+	-o-transition: all $time;
+	-ms-transition: all $time;
+}
+
+@mixin transitionEffectAllEaseIn ($time) {
+	-webkit-transition: all $time ease-in;
+	-moz-transition: all $time ease-in;
+	-o-transition: all $time ease-in;
+	-ms-transition: all $time ease-in;
+}
+
+@mixin blockquoteCodeGrey {
+	margin: 0 0 10px 0;
+	font-size: $basefontsize*14/12;
+	font-style: italic;
+	color: $blockquoteColor;
+	line-height: $baselineheight*24/12;
+	padding-left: 30px;
+	padding-right: 5px;
+	background: transparent url(../images/quote.png) no-repeat left 7px;
+}
+
+@mixin blockquoteCodeClear {
+	margin: 0 0 10px 0;
+	font-size: $basefontsize*14/12;
+	font-style: italic;
+	color: $blockquoteColor;
+	line-height: $baselineheight*24/12;
+	padding-left: 30px;
+	padding-right: 5px;
+	background: transparent url(../images/quote.png) no-repeat left 7px;
+}
+
+@mixin submitButtonStylingV1 ($widthPercent,$paddingPercent) {
+	display: block;
+	width: $widthPercent;
+	margin: 0 auto;
+	padding: $paddingPercent;
+	border: 0;
+	border-radius: 10px;
+	background: $contactFormSubmitBack;
+	color: $contactFormSumbitColor;
+	@include transitionEffectAll(0.5s);
+	text-transform: uppercase;
+	&:hover {
+		background: $contactFormSubmitHoverBack;
+	}
+}
+
+@mixin transitionBackBorder($time,$special) {
+	transition: background-color $time $special, color $time $special;
+}
+
+@mixin transitionFullBackBorder($time,$special) {
+	transition: background-color $time $special, color $time $special, border-color $time $special;
+}
+
+@mixin transitionSize($time,$special) {
+	transition: width $time $special;
+	transition: height $time $special; 
+	transition: line-height $time $special;
+}
+
+@mixin ghostButtonBasic {
+	display: block;
+	width: 200px;
+	padding: 8px;
+	color: #fff;
+	border: 1px solid $ghostbuttoncolor;
+	text-align: center;
+	outline: none;
+	text-decoration: none;
+	margin: 0 auto;
+	margin-bottom: 2%;
+	border-radius: 5px;
+	font-weight: bold;
+	text-transform: uppercase;
+	&:hover, &:active {
+		background: $ghostbuttoncolor;
+		color: $ghostbuttonhovercolor;
+	}
+}
+
+
+
+// @mixin subMenuBasic ($left,$top) {
+// 	// style the subMenu
+// 	width: 100%;
+// 	display: none;
+// 	position: absolute;
+// 	// left: 89%;
+// 	// top: 16%;
+// 	left: $left;
+// 	top: $top;
+// 	border:1px solid $sidebarBorderColor;
+// 	background: $sidebarNavBack;
+// 	// bx slider's z-index is set to 2000; you have to exceed that value
+// 	z-index: 4000;
+// 	// enable the ability for list items to appear
+// 	& li {
+// 		display:list-item; //Set the sub navs list items back
+// 		// float:none;
+// 		// style the submenu list items
+// 		& a {
+// 			display:block;
+// 			// float:none;
+// 			padding: $sidebarNavPadding;
+// 			font-size: $basefontsize*1.1;
+// 		}
+// 	}
+// }
+
+// @mixin directionButtons ($arrowDirection) {
+// 	// float direction should match arrow direction
+// 	// where $direction is either left or right for the direction of the arrow
+// 	// we assume the background image is always the same
+// 	float: $arrowDirection;
+// 	background: #fff url(/images/controls.png) no-repeat $arrowDirection top;
+// 	display: block;
+// 	cursor: pointer;
+// 	width: 25px;
+// 	height: 25px;
+// 	border: $carouselScrollBorder;
+// }
+
+// @mixin portfolioButtonsV1 {
+// 	color: $footerFontColor;
+// 	font-size: $basefontsize*13/12;
+// 	font-family: $headingFontFamily;
+// 	border-radius: 3px;
+// 	text-align: center;
+// 	background: #fff url(/images/button.png) repeat-x left top;
+// 	padding: 0 20px 0 20px;
+// 	line-height: $baselineheight*26/12;
+// 	height: 26px;
+// 	border: $carouselScrollBorder;
+// 	// want them on the same line
+// 	display: inline-block;
+// 	cursor: pointer;
+// 	@include transitionEffectAllEaseIn(200ms);
+// 	//:hover must always be last for pseudo selectors
+// 	&:link {
+// 		color: $footerFontColor;
+// 	}
+// 	&:visited {
+// 		color: $footerFontColor;
+// 	}
+// 	&:hover {
+// 		color: $baseHoverColor;
+// 	}
+// }
+
+// @mixin clearDividerLine {
+// 	// use .clear before you use .line
+// 	.clear {
+// 		clear:both;
+// 	}
+
+// 	// for the dividing line div to work you must first use div.clear (above) first... otherwise the div gets stuck within another element or div
+
+// 	.line {
+// 		background: $horizontalLine;
+// 		height: 2px;
+// 		padding: 20px 0 0 0;
+// 		color: $sidebarNavFontColor;
+// 	}
+// }
+
+// @mixin blogSearchBoxBorderSet1 ($topS,$leftS,$bottomS,$rightS) {
+// 	border-left: 1px solid $leftS;
+// 	border-top: 1px solid $topS;
+// 	border-right: 1px solid $rightS;
+// 	border-bottom: 1px solid $bottomS;
+// }
+
+// @mixin blogMetaDataFormat {
+// 	color: $blogMetaColor;
+// 	font-style: italic;
+// 	font-family: $blogPostFontFamily;
+// 	font-size: $basefontsize;
+// 	float: left;
+// 	// display: inline-block;
+// 	// padding-left: 2.5%;
+// 	// setting the line height to 1 allows us to align the text with the central axis of the icons they're beside
+// 	line-height: 1;
+// 	padding-right: 5px;
+// }
+
+// @mixin buttonShowcaseFactor ($backColor,$borderColor) {
+// 	background-color: $backColor;
+// 	border: 1px solid $borderColor;
+// 	color: #FFF;
+// 	&:hover {
+// 		background: $altHoverBackColOne;
+// 	}
+// }
+
+// @mixin boxesShowCaseFactorV1 ($backColor,$borderColor,$color) {
+// 	background-color: $backColor;
+// 	border: 1px solid $borderColor;
+// 	color: $color;
+// 	clear: both;
+// 	margin: 10px 0;
+// 	text-shadow: none;
+// 	padding: 15px 13px 15px 15px;
+// 	line-height: $baselineheight*17/12;
+// }
+
+// // because the example we modelled is using a monochromatic color set we just make one colour darker and darker
+// // background color is the base color and the lightest
+// @mixin boxesShowCaseFactorV2 ($baseColor) {
+// 	border-radius: 3px;
+// 	background-color: $baseColor;
+// 	border: 1px solid darken($baseColor,5%);
+// 	color: darken($baseColor,10%);
+// 	clear: both;
+// 	margin: 10px 0;
+// 	text-shadow: none;
+// 	padding: 15px 15px 13px 15px;
+// 	line-height: $baselineheight*17/12;
+// 	font-size: $basefontsize;
+// 	display: inline-block;
+// 	width: 100%;
+// }
+
+// // this mixin is used for the portfolio navigation buttons
+// // also used for the Tabs, Toggle and Tables page
+// @mixin standardButtonNav {
+// 	// & li:first-child {
+// 	// 	text-transform: uppercase;
+// 	// 	font-size: $basefontsize;
+// 	// 	font-family: $headingFontFamily;
+// 	// }
+// 	& li {
+// 		list-style: none;
+// 		display: list-item;
+// 		width: auto;
+// 		// the display: inline-block on the a doesn't bring the buttons onto the same line because the "li" are still block elements... you have to change parent li elements into inline blocks too...
+// 		display: inline-block;
+// 		// to adjust the margins/spacing between the porfolio nav buttons I had to apply the margin changes to the li not the "a" this time
+// 		margin-left: 1%;
+// 		// margin-right: 2%;
+// 		& a {
+// 			@include portfolioButtonsV1;
+// 		}
+// 	}
+// 	// & li a {
+// 	// 	@include portfolioButtonsV1;
+// 	// }
+// }
+
+// @mixin tabToggleContent {
+// 	border: 1px solid lighten(grey,40%);
+// 	border-radius: 3px;
+// 	margin-bottom: 4%;
+// 	// weirdly the img overflowed so I had to increase the .tab_content box padding bottom to compensate
+// 	padding: 2% 3% 1% 3%;
+// 	overflow: hidden;
+// 	& img {
+// 		float: left;
+// 		display: inline-block;
+// 		margin: 0;
+// 		padding: 0;
+// 		margin: 0 20px 20px 0;
+// 	}
+// }
+
+// @mixin specialBulletsDotted {
+// 	// use for the li element
+// 	// list-style: hiragana inside;
+// 	background: transparent url(/images/bullet.png) left 8px no-repeat;
+// 	padding-left: 3%;
+// }
+
+// @mixin contactFormFieldBaseV1 {
+// 	@include column(10);
+// 	color: $contactFormColor;
+// 	height: 2em;
+// 	border-radius: 3px;
+// 	border: $contactFormBorder;
+// 	margin-bottom: 2%;
+// 	background: $contactFormFieldBack;
+// 	font-family: $contactFormFamily;
+// 	padding: 5px 10px;
+// 	// remove the ability to resize
+// 	resize: none;
+// }
+
+
+
+////////////////////////////////////////////
+///// 		MAIN CODE
+///////////////////////////////////////////////
+
+// .buttonBlue {
+// 	@include portfolioButtonsV1;
+// 	background: $sidebarNavBack;
+// 	color: $sidebarNavFontColor;
+// 	&:link {
+// 		color: $sidebarNavFontColor;
+// 	}
+// 	&:visited {
+// 		color: $sidebarNavFontColor;
+// 	}
+// 	&:hover {
+// 		background: $altHoverColorOption2;
+// 	}
+// }
+
+.ghost-button-fullcolorfade {
+	@include ghostButtonBasic;
+	border: 2px solid $ghostbuttoncolor;
+	color: $ghostbuttoncolor;
+	background-color: transparent;
+	@include transitionFullBackBorder(0.3s,ease-out);
+	&:hover, &:active {
+		background-color: $ghostfullColourFade;
+		border-color: $ghostfullColourFade;
+		color: $ghostbuttoncolor;
+		@include transitionFullBackBorder(0.4s,ease-out);
+	}
+}
+
+.ghost-button-bordercolorfade {
+	@include ghostButtonBasic;
+	color: $ghostbuttoncolor;
+	border: 2px solid $ghostbuttoncolor;
+	@include transitionBackBorder(0.3s,ease-out);
+	&:hover, &:active {
+		color: $ghostborderFadeColour;
+		border-color: $ghostborderFadeColour;
+		@include transitionBackBorder(0.4s,ease-out);
+	}
+}
+
+.ghost-button-thick {
+	@include ghostButtonBasic;
+	border: 3px solid $ghostbuttoncolor;
+}

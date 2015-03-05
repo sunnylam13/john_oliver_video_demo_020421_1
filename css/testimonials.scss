@@ -1,0 +1,36 @@
+section.testimonial {
+	// to turn this on; comment out the display
+	display: none;
+	// so that the testimonial blocks go right across the entire width of .content
+	// padding-right: 0;
+	clear: both;
+	margin-bottom: 3%;
+	& h2 {
+		margin-bottom: 3%;
+		text-align: center;
+		font-size: $basefontsize*1.3;
+	}
+}
+
+ul.testimonialListV2 {
+	list-style: none;
+	width: 100%;
+	position: relative;
+	padding-right: 0;
+	& li {
+		background: none;
+		background-color: $testimonialBack;
+		padding: 10px;
+		margin-bottom: 20px;
+	}
+	& blockquote p {
+		@include blockquoteCodeGrey;
+		font-size: $basefontsize;
+	}
+	& cite {
+		padding-left: 25px;
+		font-family: $blockquoteFont;
+		font-style: italic;
+		font-size: $basefontsize;
+	}
+}

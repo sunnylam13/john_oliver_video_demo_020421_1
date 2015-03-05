@@ -1,0 +1,19 @@
+.header {
+	background: $headerbackcolor;
+	height: 20%;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	line-height: $baselineheight*3;
+	padding-top: 3%;
+	padding-right: 3%;
+	padding-left: 3%;
+	padding-bottom: 3%;
+	& h1 {
+		text-align: center;
+		line-height: $baselineheight*3;
+		font-size: $basefontsize*5;
+		font-style: italic;
+		text-shadow:10px 10px 10px black;
+		color: $headerFontColor;
+	}
+}

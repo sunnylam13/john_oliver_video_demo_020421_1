@@ -1,0 +1,146 @@
+////////////////////////////////////////////
+// 		SETUP STUFF
+////////////////////////////////////////////
+
+// http://elemisdesign.com/demos/caprice/style/images/
+
+////////////////////////////////////////////
+// 		IMPORTS
+////////////////////////////////////////////
+
+@import 'normalize';
+@import 'grid';
+@import 'responsive';
+@import 'columns';
+@import 'typography';
+@import 'mixins.universal';
+
+////////////////////////////////////////////
+// 		VARIABLES
+////////////////////////////////////////////
+
+// see typography.scss
+
+////////////////////////////////////////////
+///// 		MIXINS
+///////////////////////////////////////////////
+
+@mixin baseParagraphStyle {
+	line-height: $baselineheight*1.66;
+	margin-bottom: 20px;
+	font-size: $basefontsize;
+}
+
+////////////////////////////////////////////
+// 		MAIN CODE
+////////////////////////////////////////////
+
+body {
+	font-family: $basefontfamily;
+	font-size: $basefontsize;
+	background: $basebackcolor;
+	position: relative;
+	z-index: 10;
+}
+
+// this won't override flat-ui CSS
+// body.body2 {
+// 	padding: 0;
+// 	margin: 0;
+// 	background: $basebackcolor;
+// }
+
+.wrapper {
+	max-width: 100%;
+	margin: 0 auto;
+	position: relative;
+	// z-index: 10;
+}
+
+.main {
+	margin: 2% -1% 2% 2%;
+	// border: $mainBorder;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+	color: $baseFontColor;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin-bottom: 2%;
+}
+
+// for some mysterious reason a dot kept appearing in the header fixed nav menu so I decided to set that global li's would be default list-style-type: none unless specified otherwise.
+li {
+	list-style-type: none;
+}
+
+// h1,h2,h3,h4,h5,h6 {
+// 	color: #4a4a4a;
+// 	font-weight: normal;
+// 	margin: 0 0 10px 0;
+// 	font-family: $headingFontFamily;
+// }
+
+// h3 {
+// 	font-size: $basefontsize*18/12;
+// 	line-height: $baselineheight*22/12;
+// 	// font-size: $basefontsize*1.5;
+// 	// line-height: $baselineheight*1.83;
+// }
+
+p {
+	// to adjust this change the mixin
+	@include baseParagraphStyle;
+}
+
+a {
+	color: $baseLinkColor;
+	&:hover {cursor:pointer}
+}
+
+// ////////////////////////////////////////////
+// ///// 		HEADER
+// ///////////////////////////////////////////////
+
+@import 'header';
+
+// ////////////////////////////////////////////
+// ///// 		CONTENT
+// ///////////////////////////////////////////////
+
+// @import 'content';
+
+@import 'video';
+@import 'buttonControls';
+
+// ////////////////////////////////////////////
+// ///// 		SIDEBAR
+// ///////////////////////////////////////////////
+
+// @import 'sidebar';
+
+// ////////////////////////////////////////////
+// ///// 		TESTIMONIALS
+// ///////////////////////////////////////////////
+
+// @import 'testimonials';
+
+// ////////////////////////////////////////////
+// ///// 		HEADING
+// ///////////////////////////////////////////////
+
+// @import 'logos';
+
+// ////////////////////////////////////////////
+// ///// 		FOOTER
+// ///////////////////////////////////////////////
+
+@import 'footer';

@@ -1,0 +1,74 @@
+.sidebar
+	.sidebarCentreDiv
+	h2 Join Today and 
+	h2 
+		span Receive 50% Off For Life
+	p Try Openskej and discover how easy it is to schedule meetings with friends or clients. This is a limited time offer during our beta phase. Try out Openskej today.
+
+	form(id="contactForm",class='forms', method="post", action="./php/pylpemail.php")
+		fieldset
+			ol
+				li.form-row.text-input-row
+					label Name
+					input(
+						type='text',
+						name='name',
+						class = 'text-input',
+						required)
+				li.form-row.text-input-row
+					label Email
+					input(
+						type='text',
+						name='email',
+						class = 'text-input',
+						required)
+				li.form-row.text-input-row
+					label Phone
+					input(
+						type='text',
+						name='phone',
+						class = 'text-input',
+						required)
+				//- li.form-row.text-input-row
+				//- 	label Subject
+				//- 	input(
+				//- 		type='text',
+				//- 		name='subject',
+				//- 		class = 'text-input',
+				//- 		required)
+				li.form-row.text-area-row
+					label Your single most important question about appointment software?
+					textarea(
+						type='text',
+						name='whatProblem',
+						class = 'text-area',
+						required)
+				li.form-row.text-area-row
+					label WHY were you searching for information about appointment software TODAY?
+					textarea(
+						type='text',
+						name='whyProblem',
+						class = 'text-area',
+						required)
+				li.form-row.select-area-row
+					label How difficult has it been for you to find a good answer to the above while searching today?
+					select(
+						type='text',
+						name='howProblem',
+						class ='select-area',
+						required)
+						option(value="", selected="selected") Choose your difficulty...
+						option(value="notDifficult") Not At All Difficult
+						option(value="somewhatDifficult") Somewhat Difficult
+						option(value="veryDifficult") Very Difficult
+				li.form-row.hidden-row
+					input(
+						type='hidden',
+						name='hidden',
+						value)
+				li.button-row
+					input(
+						type='submit',
+						value='Sign Up For Half Off',
+						name='submit',
+						class='btn-submit')

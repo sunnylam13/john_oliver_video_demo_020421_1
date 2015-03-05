@@ -1,0 +1,166 @@
+////////////////////////////////////////////
+// 		SETUP STUFF
+////////////////////////////////////////////
+
+
+////////////////////////////////////////////
+// 		IMPORTS
+////////////////////////////////////////////
+
+
+////////////////////////////////////////////
+// 		VARIABLES
+////////////////////////////////////////////
+
+// FONT FAMILIES
+// $basefontfamily:'Lato', sans-serif;
+// $basefontfamily:'Open Sans', sans-serif;
+// font-family: 'Droid Sans', sans-serif;
+// $basefontfamily:'Amaranth', sans-serif;
+$basefontfamily:'Open Sans', sans-serif;
+$blockquoteFont: 'Droid Sans', sans-serif;
+$blogPostFontFamily: 'Amaranth', sans-serif;
+$headingFontFamily: 'Amaranth', sans-serif;
+$introTextFamily: 'Droid Sans', sans-serif;
+$sidebarNavFontFamily: 'Amaranth', sans-serif;
+$dropcapFontFamily: 'Amaranth', sans-serif;
+$contactFormFamily: Arial, Helvetica, sans-serif;
+
+// FONT COLOURS
+// $baseFontColor: lighten(#653082,10%);
+$baseFontColor: white;
+$baseHoverColor: #ab4d63;
+$baseLinkColor: #c0392b;
+
+$headerFontColor:  white;
+
+$footerFontColor: #c0392b;
+$footerFontColorHover: lighten(#e67e22,2.5%);
+
+$contactFormSumbitColor: white;
+
+$lite1Color: #688dad;
+$contactFormColor: #585858;
+$sidebarNavFontColor: #fcfcfc;
+
+$blockquoteColor: #585858;
+
+// FONT SIZES
+$basefontsize:16px;
+
+// LINE HEIGHTS
+$baselineheight:16px;
+
+// BACKGROUND COLORS
+// $headerbackcolor: lighten(#1abc9c,2.5%);
+$headerbackcolor: #c0392b;
+// $basebackcolor: darken(white,50%);
+$basebackcolor: black;
+$sidebarNavBack: #6bebd1;
+
+$contactFormSubmitBack: #f39c12;
+$contactFormSubmitHoverBack: #d35400;
+$contactFormFieldBack: #ecf0f1;
+
+$testimonialBack: #f2f2f2;
+
+// BORDERS
+$mainBorder: 1px solid lighten(grey,25%);
+$contactFormHoverBorder: 1px solid #f39c12;
+
+$contactFormBorder: 1px solid #dbdbdb;
+$sidebarBorderColor: rgba(0, 0, 0, 0.50);
+$lite1Border: 1px dotted #688dad;
+
+// $carouselScrollBorder: 1px solid #dbdbdb;
+// $tableBorder: 1px solid #dedede;
+
+// HORIZONTAL LINES
+// these use the background selector
+$horizontalLine: transparent url(../images/line.png) repeat-x;
+// NOTE:  make sure the URL is correct otherwise you don't see a thing
+
+// PADDING
+$sidebarNavPadding: 8% 4% 8% 4%;
+$formTextInputPadding: 1% 2% 1% 2%;
+
+
+////////////////////////////////////////////
+///// 		GHOST BUTTONS
+///////////////////////////////////////////////
+///
+
+$ghostbuttoncolor: #fff;
+$ghostbuttonhovercolor: #000;
+$fadeColour: rgba(255,255,255,0.4);
+
+// $ghostborderFadeColour:  #66d8ed;
+$ghostborderFadeColour:  #e74c3c;
+
+$ghostfullColourFade: #e74c3c;
+$ghostfontfamily: sans-serif;
+$ghostfontsize: $basefontsize;
+
+////////////////////////////////////////////
+
+
+
+////////////////////////////////////////////
+///// 		MIXINS
+///////////////////////////////////////////////
+
+
+////////////////////////////////////////////
+// 		MAIN CODE
+////////////////////////////////////////////
+
+// suggest you build some classes ahead of time which you can assign as required
+
+// I almost always get rid of text decoration so why no just get rid of it by default?
+a {
+	text-decoration: none;
+	&:visited {
+		text-decoration: none;
+	}
+}
+
+// primarily used in footer
+.lite1 {
+	color: $lite1Color;
+	border-bottom: $lite1Border;
+}
+
+.lite2 {
+	// color: $lite1Color;
+	border-bottom: $lite1Border;
+}
+
+.italicIt {
+	font-style: italic;
+}
+
+// cite {
+// 	font-family: $introTextFamily;
+// 	font-size: $basefontsize*.9;
+// }
+
+.boldIt {
+	font-weight: 900;
+}
+
+.yellowHighlight {
+	background: yellow;
+}
+
+.orangeHighlight {
+	background: #ffbe74;
+}
+
+.crimsonWords {
+	color: red;
+}
+
+body.bodyCanvas {
+	background-color: $basebackcolor;
+}
+

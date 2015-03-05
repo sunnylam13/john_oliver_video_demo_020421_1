@@ -1,0 +1,55 @@
+////////////////////////////////////////////////
+// 		VARIABLES
+////////////////////////////////////////////////
+
+////////////////////////////////////////////////
+// 		MIXINS
+////////////////////////////////////////////////
+
+@mixin phoneR {
+	// Landscape phones and down
+	@media (max-width: 480px) {
+		@content;
+	}
+}
+
+@mixin phabletR {
+	// Landscape phone to portrait tablet
+	@media (max-width: 720px) {
+		@content;
+	}
+}
+
+@mixin tabletR {
+	// Landscape phone to portrait tablet
+	@media (max-width: 768px) {
+		@content;
+	}
+}
+
+@mixin desktopR {
+	// Portrait tablet and small desktops
+	@media (max-width: 940px) {
+		@content;
+	}
+}
+
+@mixin desktopRHD {
+	// large desktops
+	@media (min-width: 940px) {
+		@content;
+	}
+}
+
+// custom media queries
+
+@mixin phoneMenuItemsR {
+	@media (min-width: 481px) {
+		@content;
+	}
+}
+
+
+////////////////////////////////////////////////
+// 		MAIN CODE
+////////////////////////////////////////////////

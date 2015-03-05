@@ -1,0 +1,16 @@
+#dashboard {
+	// for z-index to work you must apply position relative, absolute or fixed... then you can add the z-index
+	// NOTE:  wrapper has a z-index of 10 in style.scss; disabling it allows this to work
+	position: relative;
+	z-index: 999;
+	#effects,#controls,#videoSelection {
+		display: inline-block;
+		@include column(4);
+	}
+	& h3 {
+		text-align: center;
+	}
+	& a {
+
+	}
+}
