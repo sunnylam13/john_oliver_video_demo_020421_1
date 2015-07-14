@@ -1,2 +1,9 @@
-john.oliver.030415.1.sublime-project
-john.oliver.030415.1.sublime-workspace
+*.sublime-project
+*.sublime-workspace
+*.html
+prepros.cfg
+node_modules
+pylpemail.php
+css/bootstrap.min.css
+css/flat-ui.min.css
+css/style.css
