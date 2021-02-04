@@ -1,32 +1,32 @@
 html(lang="en")
 	head
-		include ./includes/meta.jade
-		include ./includes/links.jade
-		include ./includes/scripts.jade 
+		include ./includes/meta.pug
+		include ./includes/links.pug
+		include ./includes/scripts.pug 
 	body.bodyCanvas
-		include ./includes/googleCode.jade
+		include ./includes/googleCode.pug
 		//- .body2
 		
 		block header
 			.wrapper
-				include ./includes/header.030415.1.jade
+				include ./includes/header.030415.1.pug
 		
 		.main
 			.wrapper
 				block video
-					include ./includes/video.030415.1.jade
+					include ./includes/video.030415.1.pug
 
 				block buttonControls
-					include ./includes/buttonControls.030415.1.jade
+					include ./includes/buttonControls.030415.1.pug
 
 				block content
-					//- include ./includes/content.030215.1.jade
+					//- include ./includes/content.030215.1.pug
 
 		//- .main
 		//- 	block content
-		//- 		include ./includes/content.030215.1.jade
+		//- 		include ./includes/content.030215.1.pug
 		//- 	block sidebar
-		//- 		include ./includes/sidebar.030215.1.jade
+		//- 		include ./includes/sidebar.030215.1.pug
 		
 		//- block testimonials
 
@@ -34,4 +34,4 @@ html(lang="en")
 
 		block footer
 			.wrapper
-				include ./includes/footer.030215.1.jade
+				include ./includes/footer.030215.1.pug
