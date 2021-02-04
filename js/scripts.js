@@ -13,9 +13,19 @@ jQuery(document).ready(function($) {
 // }
 
 // videos should have no extension
+// var videos = {
+//   video1: "video/john.oliver.clip.s02e01.030515",
+//   video2: "video/john.oliver.clip.s02e02.030515"
+// }
+
+/** amazon s3 vid links
+* https://d11xl8qd9mv10s.cloudfront.net/site_video/john.oliver.clip.s02e01.030515.mp4
+
+https://d11xl8qd9mv10s.cloudfront.net/site_video/john.oliver.clip.s02e02.030515.mp4 **/
+
 var videos = {
-  video1: "video/john.oliver.clip.s02e01.030515",
-  video2: "video/john.oliver.clip.s02e02.030515"
+  video1: "https://d11xl8qd9mv10s.cloudfront.net/site_video/john.oliver.clip.s02e01.030515.mp4",
+  video2: "https://d11xl8qd9mv10s.cloudfront.net/site_video/john.oliver.clip.s02e02.030515.mp4"
 }
 
 // provide global video object
