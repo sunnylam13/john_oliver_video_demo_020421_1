@@ -1,0 +1,63 @@
+
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="robots" content="noindex,nofollow"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"/>
+    <link href="./css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css"/>
+    <link href="http://fonts.googleapis.com/css?family=Amaranth" rel="stylesheet" type="text/css"/>
+    <link href="http://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet" type="text/css"/>
+    <!-- bxSlider CSS file-->
+    <!-- SCRIPTS-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <!-- jQuery library (served from Google)-->
+    <script type="text/javascript" src="./js/scripts.js"></script>
+  </head>
+  <body class="bodyCanvas">
+    <div class="wrapper">
+      <div class="header">
+        <h1>John Oliver's Best With Filters!</h1>
+      </div>
+    </div>
+    <div class="main">
+      <div class="wrapper">
+        <div id="videoDiv">
+          <video id="video" width="720" height="401"></video>
+          <!--//////////////////////////////////////////-->
+          <!-- 		SETUP SCRATCH BUFFER FOR CANVAS-->
+          <!--//////////////////////////////////////////-->
+          <canvas id="buffer" width="720" height="401"></canvas>
+          <canvas id="display" width="720" height="401"></canvas>
+          <!-- END SETUP SCRATCH BUFFER FOR CANVAS-->
+        </div>
+        <div id="dashboard">
+          <div id="effects">
+            <h3>Effects</h3><a class="effect ghost-button-fullcolorfade" id="normal">Normal</a><a class="effect ghost-button-fullcolorfade" id="western">Western</a><a class="effect ghost-button-fullcolorfade" id="noir">Noir</a><a class="effect ghost-button-fullcolorfade" id="scifi">Scifi</a>
+          </div>
+          <div id="controls">
+            <h3>Controls</h3><a class="control ghost-button-bordercolorfade" id="play">Play</a><a class="control ghost-button-bordercolorfade" id="pause">Pause</a><a class="control ghost-button-bordercolorfade" id="loop">Loop</a><a class="control ghost-button-bordercolorfade" id="mute">Mute</a>
+          </div>
+          <div id="videoSelection">
+            <h3>Videos</h3><a class="videoSelection ghost-button-thick" id="video1">Video1</a><a class="videoSelection ghost-button-thick" id="video2">Video2</a>
+          </div>
+        </div>
+        <div class="content" style="width:95%">
+          <h2>Disclaimer and Generally Expected Results</h2>
+          <p> Most testimonials on this website highlight extraordinary outcomes. As with most products or services, by their very nature all results are atypical and will vary with every individual. Typical results are exceedingly difficult to predict, as all markets, businesses, motives, and results are different.</p>
+          <p> This is not a "one-size-fits-all" service or program, and it teaches a wide variety of systems and strategies. Therefore, it is impossible for anyone to predict how (or even if) you will use the information provided in your specific business model. As with every business venture, there's inherent risk. You even stand a chance to lose money. So please use discretion when making a purchasing decision.</p>
+          <p> All testimonials and case studies have been collected from people who have had personal experience with our products or our services, and they have each submitted their kind words willingly, and without direct financial payment or compensation.</p>
+          <p> In rare cases, such as with case studies, students or clients may have received substantial discounts on our products in exchange for their honest review. Some endorsements have been sent to us from paying clients who have initially hired us for our consulting services, and may not necessarily directly reflect the specific products showcased on this particular website. Some have become friends or partners in various ventures.</p><span class="disclaimerExitButton">
+            <input type="button" value="Close Window &amp; Return to Where You Were" onclick="javascript:window.close();"/></span>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="footer">
+        <ul>
+          <li><a href="index.html">Home</a><a href="terms.html">Terms &amp; Conditions</a><a href="privacy.html">Privacy Policy</a><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
