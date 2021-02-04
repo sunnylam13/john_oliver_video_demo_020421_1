@@ -23,9 +23,16 @@ jQuery(document).ready(function($) {
 
 https://d11xl8qd9mv10s.cloudfront.net/site_video/john.oliver.clip.s02e02.030515.mp4 **/
 
+// var videos = {
+//   video1: "https://d11xl8qd9mv10s.cloudfront.net/site_video/john.oliver.clip.s02e01.030515.mp4",
+//   video2: "https://d11xl8qd9mv10s.cloudfront.net/site_video/john.oliver.clip.s02e02.030515.mp4"
+// }
+
+// had to remove the extension since the script checks what format it is
+
 var videos = {
-  video1: "https://d11xl8qd9mv10s.cloudfront.net/site_video/john.oliver.clip.s02e01.030515.mp4",
-  video2: "https://d11xl8qd9mv10s.cloudfront.net/site_video/john.oliver.clip.s02e02.030515.mp4"
+  video1: "https://d11xl8qd9mv10s.cloudfront.net/site_video/john.oliver.clip.s02e01.030515",
+  video2: "https://d11xl8qd9mv10s.cloudfront.net/site_video/john.oliver.clip.s02e02.030515"
 }
 
 // provide global video object
@@ -353,7 +360,7 @@ function errorHandler () {
   var video = document.getElementById("video");
   if (video.error) {
     video.poster = "images/technicaldifficulties.jpg";
-    alert(video.error.code);
+    console.log("The video error code is: " +video.error.code);
   }
 }
 
